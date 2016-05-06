@@ -1,0 +1,87 @@
+/*初始化*/
+*{webkit-box-sizing: border-box;  -moz-box-sizing: border-box;  box-sizing: border-box; border:0; padding:0; margin:0;}
+body{font-family:"Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,Verdana,sans-serif,"WenQuanYi Micro Hei","\5B8B\4F53";font-size:14px; color:#666;}
+li{ list-style:none;}
+a{text-decoration:none;}
+a:link{ text-decoration:none;}
+a:active{ text-decoration:none;}
+var,em {font-style:normal;}
+table{border-collapse:collapse;}
+.left{ float:left}
+.right{ float:right;}
+input{outline:none;}
+button{outline:none; cursor:pointer;}
+html,body {height:100%; }
+
+/**基本样式**/
+/**边框颜色 #d7d7d7  鼠标经过 #0697ef**
+/**文字颜色 #666 大小14px**
+/**按钮颜色 #1c9aec 鼠标经过 #10a2fb**
+/**查询条件区域 如果一列需要100%宽度用class：width-xlag**/
+
+
+/**input样式**/
+.int-mini{ width:102px; float:left; border:1px solid #e4e4e4; height:30px; padding-left:4px; font-size:12px;}
+.int-mini:hover{ border:1px solid #0697ef}
+
+.int-small{ width:140px; float:left; border:1px solid #e4e4e4; height:30px; padding-left:4px; font-size:12px;}
+.int-small:hover{ border:1px solid #0697ef}
+
+.int-medium{ width:190px; float:left; border:1px solid #e4e4e4; height:30px; padding-left:4px; font-size:12px;}
+.int-medium:hover{ border:1px solid #0697ef}
+
+.int-large{ width:260px; float:left; border:1px solid #e4e4e4; height:30px; padding-left:4px; font-size:12px;}
+.int-large:hover{ border:1px solid #0697ef}
+
+.int-xlarge { width:350px; float:left; border:1px solid #e4e4e4; height:30px; padding-left:4px; font-size:12px;}
+.int-xlarge :hover{ border:1px solid #0697ef}
+
+.int-xxlarge { width:500px; float:left; border:1px solid #e4e4e4; height:30px; padding-left:4px; font-size:12px;}
+.int-xxlarge :hover{ border:1px solid #0697ef}
+
+.int-medium-float{ width:210px;  border:1px solid #e4e4e4; height:30px; padding-left:4px; font-size:12px;}
+.int-medium-float:hover{ border:1px solid #0697ef}
+
+/**表格中输入框**/
+.table-int-mini{ width:102px;border:1px solid #e4e4e4; height:30px; padding-left:4px; font-size:12px;}
+.table-int-mini:hover{ border:1px solid #0697ef}
+
+/**下拉框**/
+.select-mini{width:80px; float:left; border:1px solid #e4e4e4; height:30px;  font-size:12px;}
+.select-mini:hover{border:1px solid #0697ef;}
+
+.select-small{width:140px; float:left; border:1px solid #e4e4e4; height:30px;  font-size:12px;}
+.select-small:hover{border:1px solid #0697ef;}
+
+.select-medium{width:190px; float:left; border:1px solid #e4e4e4; height:30px;  font-size:12px;}
+.select-medium:hover{border:1px solid #0697ef;}
+
+.select-large{width:260px; float:left; border:1px solid #e4e4e4; height:30px;  font-size:12px;}
+.select-large:hover{border:1px solid #0697ef;}
+
+.select-xlarge{width:350px; float:left; border:1px solid #e4e4e4; height:30px;  font-size:12px;}
+.select-xlarge:hover{border:1px solid #0697ef;}
+
+.select-xxlarge{width:500px; float:left; border:1px solid #e4e4e4; height:30px;  font-size:12px;}
+.select-xxlarge:hover{border:1px solid #0697ef;}
+
+.select-small-float{width:140px; border:1px solid #e4e4e4; height:30px;  font-size:12px;}
+.select-small-float:hover{border:1px solid #0697ef;}
+
+/**单选 复选**/
+.checkbox-medium{ width:18px; height:18px;}
+.margin-checkbox{margin-top:14px; text-align:right;}
+
+
+/**按钮**/
+.blling-btn{background:#1c9aec; color:#fff; font-size:16px;}
+.blling-btn:hover{  background:#10a2fb}
+/**查询区域按钮宽度**/
+.width-btn{ width:120px; height:40px;  float:left; margin-right:20px;}
+/**查询小按钮**/
+.blue-btn{width:60px; height:30px; border:1px solid #10a2fb; color:#fff; line-height:30px;}
+/**圆角按钮**/
+.small-btn{width:60px; height:30px; background:#fff; border:1px solid #10a2fb; color:#10a2fb; border-radius:5px; }
+.small-btn:hover{ background:#10a2fb; color:#fff;}
+/**table下面右侧btn**/
+.pst-btn{width:120px; height:40px; margin-left:20px;}
