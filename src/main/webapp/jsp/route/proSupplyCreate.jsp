@@ -53,7 +53,7 @@
 				<!--白底内侧-->
 				<div class="nav-tplist-wrapper">
 					<!--白底内侧-->
-					<div class="nav-form">
+					<div class="nav-form" id="addForm">
 						<ul class="big-word">
 							<li>
 								<p class="word">路由ID：</p>
@@ -109,7 +109,7 @@
 					    		<td>{{:standedProductName}} </td>
 					    		<td>{{:mustAttrValue1}}</td>
 					   			<td>{{:mustAttrValue2}}</td>
-					    		<td><input type="text" class="table-int-mini"></td>
+					    		<td><input type="text" id="totalNum" class="table-int-mini"></td>
 					  		</tr>
 					      </script>
 						</table>
@@ -123,7 +123,7 @@
 					<!--分页结束-->
 					<div class="pst-bttton">
 						<input type="button" id="SAVE_BTN" class="blling-btn pst-btn" value="提交"><input
-							type="button" id="SAVE_CONTINUE" class="blling-btn pst-btn" value="继续添加">
+							type="button" id="SAVE_CONTINUE_BTN" class="blling-btn pst-btn" value="继续添加">
 					</div>
 
 

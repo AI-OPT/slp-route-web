@@ -16,7 +16,7 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
 	//实例化AJAX控制处理对象
     var ajaxController = new AjaxController();
     //定义页面组件类
-    var RouteCreatePager = Widget.extend({
+    var ProSupplyCreatePager = Widget.extend({
     	//属性，使用时由类的构造函数传入
     	attrs: {
     	},
@@ -28,7 +28,7 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
     	events: {
     		//key的格式: 事件+空格+对象选择器;value:事件方法
     		 "click #SAVE_BTN":"_saveBtnClick",
-    		 "click #SAVE_NEXT_BTN":"_saveNextBtnClick",
+    		 "click #SAVE_CONTINUE_BTN":"_saveContinueBtnClick",
              "click #PP_BTN":"_searchBtnClick",
              "click #MJ_PP_BTN":"_searchmjProductsClick",
     		 "click #pp_checkAll":"_ppcheckall",//产品全选
@@ -45,10 +45,10 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
 			window.location.href=_base+"/preferentialProduct/list";
 		},
 		_searchmjProductsClick:function(){
-			this._searchmjProducts(1,RouteCreatePager.DEFAULT_PAGE_SIZE);
+			this._searchmjProducts(1,ProSupplyCreatePager.DEFAULT_PAGE_SIZE);
 		},
 		_searchGiftClick:function(){
-			this._searchGiftProducts(1,RouteCreatePager.DEFAULT_PAGE_SIZE);
+			this._searchGiftProducts(1,ProSupplyCreatePager.DEFAULT_PAGE_SIZE);
 		},
 		_checkRule:function(){
 	    		var ruleName = jQuery.trim($("#ruleAmount").val());
@@ -103,13 +103,13 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
       	},
     	//重写父类
     	setup: function () {
-    		RouteCreatePager.superclass.setup.call(this);
+    		ProSupplyCreatePager.superclass.setup.call(this);
     	//	this._bindEvents();
     		//初始化执行搜索,查询可销售产品
-//    		this._searchProducts(1,RouteCreatePager.DEFAULT_PAGE_SIZE);
-//    		this._searchmjProducts(1,RouteCreatePager.DEFAULT_PAGE_SIZE);
-//    		this._searchProducts1(1,RouteCreatePager.DEFAULT_PAGE_SIZE);
-//    		this._searchGiftProducts(1,RouteCreatePager.DEFAULT_PAGE_SIZE);
+//    		this._searchProducts(1,ProSupplyCreatePager.DEFAULT_PAGE_SIZE);
+//    		this._searchmjProducts(1,ProSupplyCreatePager.DEFAULT_PAGE_SIZE);
+//    		this._searchProducts1(1,ProSupplyCreatePager.DEFAULT_PAGE_SIZE);
+//    		this._searchGiftProducts(1,ProSupplyCreatePager.DEFAULT_PAGE_SIZE);
 //    		this._bindUnitSelect();
 //    		this._bindServiceSelect();
 //    		this._bindActiveSelect();
@@ -169,7 +169,7 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
 				ajaxController.ajax({
 	                type: "post",
 	                dataType : "json",
-	                url : _base+ "/route/addRoute",
+	                url : _base+ "/route/addProSupply",
 	                processing: true,
 	                message: "正在加载，请等待...",
 	                data:$('#addForm').find("input,select").serializeArray(),
@@ -327,12 +327,12 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
     		var _this = this;
     		$('#API_KEY').bind('keypress',function(event){
 				if(event.keyCode == "13"){
-					_this._searchProducts(1,RouteCreatePager.DEFAULT_PAGE_SIZE);
+					_this._searchProducts(1,ProSupplyCreatePager.DEFAULT_PAGE_SIZE);
 				}
 			});
     	},
     	_searchBtnClick: function(){
-    		this._searchProducts(1,RouteCreatePager.DEFAULT_PAGE_SIZE);	
+    		this._searchProducts(1,ProSupplyCreatePager.DEFAULT_PAGE_SIZE);	
     	},
     	//产品全选
     	_ppcheckall: function() {
@@ -460,8 +460,8 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
   									productName:$.trim(productName),
   									serviceType:serviceType
   								},
-  								pageSize : RouteCreatePager.DEFAULT_PAGE_SIZE,
-  								visiblePages : RouteCreatePager.DEFAULT_PAGE_SIZE,
+  								pageSize : ProSupplyCreatePager.DEFAULT_PAGE_SIZE,
+  								visiblePages : ProSupplyCreatePager.DEFAULT_PAGE_SIZE,
   								message : "正在为您查询数据..",
   								render : function(data) {
   									if (data != null&& data != 'undefined'&& data.length > 0) {
@@ -498,8 +498,8 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
  									productName:$.trim(productName),
  									serviceType:serviceType
  								},
- 								pageSize : RouteCreatePager.DEFAULT_PAGE_SIZE,
- 								visiblePages : RouteCreatePager.DEFAULT_PAGE_SIZE,
+ 								pageSize : ProSupplyCreatePager.DEFAULT_PAGE_SIZE,
+ 								visiblePages : ProSupplyCreatePager.DEFAULT_PAGE_SIZE,
  								message : "正在为您查询数据..",
  								render : function(data) {
  									if (data != null&& data != 'undefined'&& data.length > 0) {
@@ -535,8 +535,8 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
 									productName:$.trim(productName),
 									serviceType:serviceType
 								},
-								pageSize : RouteCreatePager.DEFAULT_PAGE_SIZE,
-								visiblePages : RouteCreatePager.DEFAULT_PAGE_SIZE,
+								pageSize : ProSupplyCreatePager.DEFAULT_PAGE_SIZE,
+								visiblePages : ProSupplyCreatePager.DEFAULT_PAGE_SIZE,
 								message : "正在为您查询数据..",
 								render : function(data) {
 									if (data != null&& data != 'undefined'&& data.length > 0) {
@@ -574,8 +574,8 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
 									productId:productId,
 									serviceType:serviceType
 								},
-								pageSize : RouteCreatePager.DEFAULT_PAGE_SIZE,
-								visiblePages : RouteCreatePager.DEFAULT_PAGE_SIZE,
+								pageSize : ProSupplyCreatePager.DEFAULT_PAGE_SIZE,
+								visiblePages : ProSupplyCreatePager.DEFAULT_PAGE_SIZE,
 								message : "正在为您查询数据..",
 								render : function(data) {
 									if (data != null&& data != 'undefined'&& data.length > 0) {
@@ -595,5 +595,5 @@ define('app/jsp/route/proSupplyCreate', function (require, exports, module) {
     	}
     });
     
-    module.exports = RouteCreatePager
+    module.exports = ProSupplyCreatePager
 });
