@@ -66,7 +66,11 @@
 								<li>
 									<p class="word">服务配置类型</p>
 									<p>
-										<select class="select-medium"></select>
+										<select id="servType" class="select-medium">
+										<option value="">请选择服务类型</option>
+										<option value="P">页面跳转类</option>
+										<option value="H">HTTP类</option>
+										</select>
 									</p>
 									<p>
 										<input type="button" value="查询" class="blling-btn blue-btn">
@@ -77,7 +81,7 @@
 										<a href="#"><i class="icon-plus"></i></a>
 									</p>
 									<p class="plus-word">
-										<a href="服务配置信息管理(添加).html">新建访问服务</a>
+										<a href="${_base}/serv/toServAdd">新建访问服务</a>
 									</p>
 								</div>
 							</ul>
@@ -102,22 +106,12 @@
                       		<tr>
 					   			<td>{{:servId}}</td>
 					   			<td>{{:servName}}</td>
-					    		<td>{{:standedProductName}} </td>
-					    		<td>{{:mustAttrValue1}}</td>
-					   			<td>{{:mustAttrValue2}}</td>
-					    		<td><input type="text" id="totalNum" class="table-int-mini"></td>
-					  		</tr>
-					      </script>
-							<tr>
-								<td>10</td>
-								<td>7772931</td>
-								<td>支付宝</td>
-								<td>支付</td>
-								<td><a href="#" class="blue">查看配置信息</a></td>
+					    		<td>{{:servType}} </td>
+					    		<td><a href="#" class="blue">查看配置信息</a></td>
 								<td><A href="服务配置信息管理(修改).html" class="blue">编辑</A><a
 									href="预警接受人列表.html" class="blue">预警接收人</a></td>
-							</tr>
-
+					  		</tr>
+					      </script>
 						</table>
 
 					</div>
@@ -138,7 +132,7 @@
 	<%@ include file="/inc/foot.jsp"%>
 	<script type="text/javascript">
 		(function() {
-			seajs.use('app/jsp/route/routeCreate', function(RouteCreatePager) {
+			seajs.use('app/jsp/serv/servQuery', function(RouteCreatePager) {
 				var pager = new RouteCreatePager({
 					element : document.body
 				});
